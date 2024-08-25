@@ -15,12 +15,13 @@ export default async function  Home() {
         linear algebra by providing guidance on essential proofs. This is meant
         for introductory topics including vectors, matrices, row operations on
         matrices, linear transformations, determinants, vector spaces,
-        eigenvalues, orthogonality, and much more. Below, you'll find various
+        eigenvalues, orthogonality, and much more. Below, you&apos;ll find various
         sections that cover key topics for getting started.
       </div>
       <div className={styles.mapped_cards}>
-        {data.map((card) => (
+        {data.map((card, index) => (
           <CreateCard
+            key={index}
             sectionName={card.section_chapter}
             sectionInfo={card.chapter_info}
             link={card.chapter_link}
